@@ -2,8 +2,10 @@
   "manifest_version": 2,
   "name": "My Cool Extension",
   "version": "0.1",
+  "permissions": [ "tabs" ],
   "background": {
-    "scripts": ["background.bundle.js"]
+    "scripts": ["background.bundle.js"],
+    "persistent": false
   },
   "content_scripts": [
     {
@@ -14,7 +16,7 @@
       ]
     }
   ],
-  "permissions": [
-    "tabs"
-  ]
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
 }
