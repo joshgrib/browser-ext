@@ -10,3 +10,18 @@ To bundle and update the extension:
 2. Go to `chrome://extensions/`
 3. Click `Load unpacked`
 4. Select the `dist` directory in this folder
+
+## Folder structure
+
+* `/dist` - The directory that the extension is loaded into chrome from
+    * `manifest.json` - the extension meta-data for chrome
+    * `jqeury-3.4.1.slim.min.js` - adds jQuery for use in the extension
+    * `bundle.js` - bundled extension code, generated with `rollup`
+* `/src` - Source code for the extension
+    * `index.js` - entry point
+    * `/plugins` - individual scripts which run depending on the URL
+
+## Existing plugins
+
+* **bb-home-pr-notes** - Adds notes sections under pull requests on the Bitbucket home page, notes are stored in `localStorage`
+* **bb-pr-diff-totals** - In the newer PR view of Bitbucket, add the total line diff counts and display total lines added and removed
