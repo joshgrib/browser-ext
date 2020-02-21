@@ -3,13 +3,13 @@ import { version } from '../package.json';
 import messages from './messages.js';
 
 const runPlugins = () => {
+  console.group(`Josh's extension v${version}`);
   plugins.filter(p => p.runFor(document.URL)).map(p => {
-    console.group(`Josh's extension v${version}`);
     console.log(`Running '${p.name}'...`)
     p.run()
     setInterval(p.run, 2000);
-    console.groupEnd(`Josh's extension v${version}`);
   });
+  console.groupEnd(`Josh's extension v${version}`);
 }
 runPlugins();
 
