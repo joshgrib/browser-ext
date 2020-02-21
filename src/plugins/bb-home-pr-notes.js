@@ -67,6 +67,6 @@ export default {
       });
       saveToLocalStorage(notes);
     }
-    window.addEventListener('load', refreshNotes);
+    setInterval(refreshNotes, 5000);
   }
 }
