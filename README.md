@@ -16,9 +16,10 @@ To bundle and update the extension:
 * `/dist` - The directory that the extension is loaded into chrome from
     * `manifest.json` - the extension meta-data for chrome
     * `jqeury-3.4.1.slim.min.js` - adds jQuery for use in the extension
-    * `bundle.js` - bundled extension code, generated with `rollup`
+    * `*.bundle.js` - bundled extension code, generated with `rollup`
 * `/src` - Source code for the extension
     * `index.js` - entry point
+    * `background.js` - background code with access to more chrome APIs
     * `/plugins` - individual scripts which run depending on the URL
 
 ## Existing plugins
