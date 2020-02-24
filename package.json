@@ -1,11 +1,13 @@
 {
-  "name": "chrome-extension",
+  "name": "josh-chrome-extension",
   "version": "1.3.0",
   "description": "A custom chrome extension to run scripts for me",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "bundle": "rollup -c"
+    "bundle": "rollup -c",
+    "sync": "node sync_manifest.js",
+    "deploy": "yarn sync && yarn bundle"
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.0.2",
