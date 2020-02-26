@@ -41,9 +41,10 @@ function refreshNotes () {
   // reload saved notes
   let notes = loadFromLocalStorage();
   // find the existing PRs, add the notes display row
-  const prs = $('tr[data-qa="pull-request-row"]');
+  const prsToReview = $('table')[0]
+  const prs = $(prsToReview).find('tr[data-qa="pull-request-row"]');
   for (let i = 0; i<prs.length; i++) {
-    const pr = prs[i];;
+    const pr = prs[i];
     const link = $(pr).find('a[data-qa="pull-request-row-link"]').attr('href');
     // get the existing notes or add a new record
     if (notes[link] === undefined) {
