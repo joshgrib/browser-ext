@@ -10,17 +10,15 @@ export default {
       const pr = prs[i];
       const subtitle = $(pr).find('small')[0];
       const repoLink = $(subtitle).find('a')[1];
-      const repoName = repoLink.innerText;
-      switch (repoName.toLowerCase()) {
-        case 'backend':
-          $(prsToReview).find('tbody').append(pr);
-          break;
-        case 'mvc':
-          $(prsToReview).find('tbody').prepend(pr);
-          break;
-        default:
-          break;
+      const repoName = repoLink.innerText.toLowerCase();
+
+      if (repoName === 'mvc') {
+        $(prsToReview).find('tbody').prepend(pr);
       }
+      if (repoName === 'backend') {
+        $(prsToReview).find('tbody').append(pr);
+      }
+
       $(pr).attr('data-sorted', true);
     }
   }
