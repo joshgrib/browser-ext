@@ -9,10 +9,13 @@ export default {
     const asbSum = (acc, current) => (+acc) + Math.abs(+current);
     const fileTreeButton = $('[aria-label="File tree"] button:first')[0];
     $('#pr-total-counts').remove();
+    const deletions = diffCounts.filter(d => d[0] === '-').reduce(asbSum, 0);
+    const additions = diffCounts.filter(d => d[0] === '+').reduce(asbSum, 0);
     $(fileTreeButton).find('span>span>span').parent().append(
       `<span id="pr-total-counts">
-        <span style="color: red;">-${ diffCounts.filter(d => d[0] === '-').reduce(asbSum, 0) } </span>
-        <span style="color: green;">+${ diffCounts.filter(d => d[0] === '+').reduce(asbSum, 0) }</span>
+        <span style="color: red;">-${ deletions } </span>
+        <span style="color: green;">+${ additions }</span>
+        <span style="color: grey;">(${ (deletions / ( deletions + additions) * 100).toFixed(0) }% removals)</span>
       </span>`
     );
   }
