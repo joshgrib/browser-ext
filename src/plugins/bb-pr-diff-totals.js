@@ -15,7 +15,7 @@ export default {
       `<span id="pr-total-counts">
         <span style="color: red;">-${ deletions } </span>
         <span style="color: green;">+${ additions }</span>
-        <span style="color: grey;">(${ (deletions / ( deletions + additions) * 100).toFixed(0) }% removals)</span>
+        <span style="color: grey;">(${ additions - deletions } Δ)</span>
       </span>`
     );
   }
