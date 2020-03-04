@@ -35,6 +35,8 @@ const getNoteTemplate = ({ text, updated }, link) => {
 };
 
 function refreshNotes () {
+  // make the tables denser
+  $('td').css('padding', '0');
   const noteRowSelector = `tr[${dataKey}]`;
   // clear current notes containers
   $(noteRowSelector).remove();
