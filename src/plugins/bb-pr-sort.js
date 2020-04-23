@@ -9,7 +9,7 @@ export default {
     for (let i = 0; i<prs.length; i++) {
       const pr = prs[i];
       const subtitle = $(pr).find('small')[0];
-      const repoLink = $(subtitle).find('a')[1];
+      const repoLink = $(subtitle).find('a')[0];
       const repoName = repoLink.innerText.toLowerCase();
 
       if (repoName === 'mvc') {
