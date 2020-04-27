@@ -8,7 +8,11 @@ const runPlugins = () => {
   console.group(`${name} v${version}`);
   pluginsToRun.map(p => {
     console.log(`Running '${p.name}'...`)
-    p.run()
+    try {
+      p.run()
+    } catch (e) {
+      console.error(e);
+    }
     setInterval(p.run, 2000);
   });
   console.groupEnd(`${name} v${version}`);
