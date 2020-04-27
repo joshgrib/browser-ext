@@ -4,12 +4,14 @@ export default {
     return url.includes('bitbucket.org') && url.includes('/pull-requests/');
   },
   run: function () {
-    setInterval(() => {
-      const btn = $('input[name="close-source-branch-checkbox"]')[0];
-      console.log({ btn });
-      if (btn && !btn.checked) {
-        $(btn).click();
-      }
-    }, 250);
+    $('button:contains(Merge)').on('click', () => {
+      setTimeout(() => {
+        const btn = $('input[name="close-source-branch-checkbox"]')[0];
+        console.log({ btn });
+        if (btn && !btn.checked) {
+          $(btn).click();
+        }
+      }, 250);
+    })
   }
 }
