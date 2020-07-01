@@ -6,10 +6,9 @@ I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-ext
 
 To bundle and update the extension:
 
-1. Run `yarn bundle`
-2. Go to `chrome://extensions/`
-3. Click `Load unpacked`
-4. Select the `dist` directory in this folder
+1. Make sure `brave.exe` is available in the system PATH variable
+2. Update the path to your directory in `package.json`
+3. Run `yarn deploy`
 
 ## Folder structure
 

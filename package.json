@@ -7,7 +7,8 @@
   "scripts": {
     "bundle": "rollup -c",
     "sync": "node sync_manifest.js",
-    "deploy": "yarn sync && yarn bundle"
+    "load": "brave --load-extension=\"C:/Users/jgribbon/_code/browser-ext/dist\"",
+    "deploy": "yarn sync && yarn bundle && yarn load"
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.0.2",
