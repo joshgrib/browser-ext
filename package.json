@@ -1,6 +1,6 @@
 {
   "name": "josh-chrome-extension",
-  "version": "1.9.1",
+  "version": "1.10.0",
   "description": "A custom chrome extension to run scripts for me",
   "main": "index.js",
   "license": "MIT",
