@@ -5,6 +5,7 @@ import showAllPrs from './bb-home-show-all-prs.js';
 import prSort from './bb-pr-sort.js';
 import hideArchived from './bb-hide-archived-repos.js';
 import closeBranch from './bb-close-pr-branch.js';
+import jenkinsNoFavs from './jenkins-hide-favorites.js';
 
 export default [
   diffTotals,
@@ -13,5 +14,6 @@ export default [
   prSort,
   prNotes,
   hideArchived,
-  closeBranch
+  closeBranch,
+  jenkinsNoFavs
 ];
