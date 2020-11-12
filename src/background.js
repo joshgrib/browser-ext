@@ -8,3 +8,14 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     });
   }
 });
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+      if (request.urls) {
+          //request.urls is the array of urls from popup.js
+          request.urls.map(url => {
+            chrome.tabs.create({url})
+          })
+      }
+  }
+);
