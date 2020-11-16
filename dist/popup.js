@@ -48,10 +48,6 @@ const openTabs = (env, tab, repos) => {
       urls: [urls.deployment(env)]
     })
   } else if (tab === 'All') {
-    alert(JSON.stringify([
-      urls.deployment(env),
-      ...repos.map(r => urls.jenkins(env, r))
-    ]))
     chrome.runtime.sendMessage({
       urls: [
         urls.deployment(env),
@@ -108,8 +104,7 @@ const createPopupContent = (qaSiteCount) => {
   }))
 }
 
-const QA_SITE_COUNT = 20;
-
 document.addEventListener('DOMContentLoaded', () => {
+  const QA_SITE_COUNT = 20;
   createPopupContent(QA_SITE_COUNT)
 })

@@ -12,18 +12,24 @@ To bundle and update the extension:
 
 ## Folder structure
 
-* `/dist` - The directory that the extension is loaded into chrome from
-    * `manifest.json` - the extension meta-data for chrome
+* `/dist` - The directory that the extension is loaded into the browser from
+    * `manifest.json` - the extension meta-data for the browser
     * `jqeury-3.4.1.slim.min.js` - adds jQuery for use in the extension
     * `*.bundle.js` - bundled extension code, generated with `rollup`
     * `popup.html` - The DOM content for the extension popup in the toolbar
     * `popup.js` - JS code for the extention popup
 * `/src` - Source code for the extension
     * `index.js` - entry point
-    * `background.js` - background code with access to more chrome APIs
+    * `background.js` - background code with access to more the browser APIs
     * `/plugins` - individual scripts which run depending on the URL
 
-## Existing plugins
+## Functionality
+
+### Extension Popup
+
+Has buttons to open deployment environments and build pipelines, like bookmarks but one button can open multiple tabs
+
+### Plugins
 
 > These are all in `./src/plugins`
 
