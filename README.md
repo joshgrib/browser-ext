@@ -16,6 +16,8 @@ To bundle and update the extension:
     * `manifest.json` - the extension meta-data for chrome
     * `jqeury-3.4.1.slim.min.js` - adds jQuery for use in the extension
     * `*.bundle.js` - bundled extension code, generated with `rollup`
+    * `popup.html` - The DOM content for the extension popup in the toolbar
+    * `popup.js` - JS code for the extention popup
 * `/src` - Source code for the extension
     * `index.js` - entry point
     * `background.js` - background code with access to more chrome APIs
