@@ -6,6 +6,7 @@ import prSort from './bb-pr-sort.js';
 import hideArchived from './bb-hide-archived-repos.js';
 import closeBranch from './bb-close-pr-branch.js';
 import jenkinsNoFavs from './jenkins-hide-favorites.js';
+import gsNdsRename from './gs-nds-swapname.js';
 
 export default [
   diffTotals,
@@ -15,5 +16,6 @@ export default [
   prNotes,
   hideArchived,
   closeBranch,
-  jenkinsNoFavs
+  jenkinsNoFavs,
+  gsNdsRename
 ];

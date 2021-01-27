@@ -40,4 +40,5 @@ Has buttons to open deployment environments and build pipelines, like bookmarks 
 * **bb-home-show-all-prs** - Expands the pull requests on the home page to show them all
 * **bb-pr-diff-totals** - In the newer PR view of Bitbucket, add the total line diff counts and display total lines added and removed
 * **bb-pr-sort** - Sorts the pull requests for me to review to prioritize the repos I'm most familiar with
+* **gs-nds-swapname** - Rename VMs within a remote access portal
 * **jenkins-hide-favorites** - On the Jenkins Blue Ocean home page, hide the table of "favorite" pipelines
