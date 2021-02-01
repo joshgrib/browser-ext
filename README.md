@@ -42,3 +42,4 @@ Has buttons to open deployment environments and build pipelines, like bookmarks 
 * **bb-pr-sort** - Sorts the pull requests for me to review to prioritize the repos I'm most familiar with
 * **gs-nds-swapname** - Rename VMs within a remote access portal
 * **jenkins-hide-favorites** - On the Jenkins Blue Ocean home page, hide the table of "favorite" pipelines
+* **jira-dense** - CSS changes to make some Jira pages more dense

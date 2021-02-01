@@ -7,6 +7,7 @@ import hideArchived from './bb-hide-archived-repos.js';
 import closeBranch from './bb-close-pr-branch.js';
 import jenkinsNoFavs from './jenkins-hide-favorites.js';
 import gsNdsRename from './gs-nds-swapname.js';
+import jiraDense from './jira-dense.js';
 
 export default [
   diffTotals,
@@ -17,5 +18,6 @@ export default [
   hideArchived,
   closeBranch,
   jenkinsNoFavs,
-  gsNdsRename
+  gsNdsRename,
+  jiraDense
 ];
