@@ -1,14 +1,13 @@
 {
   "name": "josh-chrome-extension",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "A custom chrome extension to run scripts for me",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "bundle": "rollup -c",
     "sync": "node sync_manifest.js",
-    "load": "brave --load-extension=\"C:/Users/jgribbon/_code/browser-ext/dist\"",
-    "deploy": "yarn sync && yarn bundle && yarn load"
+    "build": "yarn sync && yarn bundle"
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.0.2",

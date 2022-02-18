@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "josh-chrome-extension",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "permissions": [
     "tabs",
     "*://*/*"

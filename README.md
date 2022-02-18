@@ -4,11 +4,21 @@ A browser extension for me to run my own scripts on web pages to add utilities
 
 I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-extension)
 
-To bundle and update the extension:
+## Bundle and update the extension
+
+1. `. Run `yarn build`
+    - This will create files in `./dist/`
+2. In the browser, visit `chrome://extensions`
+3. Make sure "Developer mode" is enabled
+4. Click the "Load unpacked" button and select the `dist` folder
 
 1. Make sure `brave.exe` is available in the system PATH variable
 2. Update the path to your directory in `package.json`
 3. Run `yarn deploy`
+
+## TODO
+
+- [ ] Add something to use the Atlassian APIs to pull data and make a timeline of what I did during the day (commits, PR actions, Jira events, etc), and maybe also show for other people on the team
 
 ## Folder structure
 
