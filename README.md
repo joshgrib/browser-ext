@@ -39,6 +39,8 @@ I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-ext
 
 Has buttons to open deployment environments and build pipelines, like bookmarks but one button can open multiple tabs
 
+After the unpacked extension is loaded, you can edit the popup files inside `./dist` and see the updates immediately in the browser.
+
 ### Plugins
 
 > These are all in `./src/plugins`
