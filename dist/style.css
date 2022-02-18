@@ -1,0 +1,22 @@
+* {
+  font-family: monospace;
+  text-align: center;
+}
+#popup-body {
+  padding: 10px;
+  background-color: orange;
+  margin: 0;
+}
+#title {
+  margin: 0;
+  font-size: 1.5em;
+}
+#popup-body button {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+#popup-body > *:not(:last-child) {
+  margin-bottom: 10px;
+}
