@@ -61,6 +61,28 @@ const createPopupContent = () => {
       openTabs.new(['http://sphereboardqa05.spheredemo.corp']);
     }
   }));
+  const LS_KEY = 'plugins-enabled';
+  if (window.localStorage.getItem(LS_KEY) === null) {
+    window.localStorage.setItem(LS_KEY, true);
+  }
+  const enabled = window.localStorage.getItem(LS_KEY) == 'true';
+  if (enabled) {
+    chrome.runtime.sendMessage('plugins-enabled');
+  }
+  const initialText = enabled ? 'Disable Plugins' : 'Enable Plugins';
+  container.append(makeElem({
+    tag: 'button',
+    innerText: initialText,
+    click: (e) => {
+      let enabled = window.localStorage.getItem(LS_KEY) == 'true';
+      enabled = !enabled;
+      if (enabled) {
+        chrome.runtime.sendMessage('plugins-enabled');
+      }
+      window.localStorage.setItem(LS_KEY, enabled);
+      e.target.innerText = enabled ? 'Disable Plugins' : 'Enable Plugins';
+    }
+  }));
 }
 
 document.addEventListener('DOMContentLoaded', createPopupContent);

@@ -23,9 +23,11 @@ const runPlugins = () => {
   });
   console.groupEnd(`${name} v${version}`);
 }
-runPlugins();
 
 chrome.runtime.onMessage.addListener(request => {
+  if (request.message === 'plugins-enabled') {
+    runPlugins();
+  }
   if (request.message === messages.URL_CHANGE) {
     runPlugins();
   }

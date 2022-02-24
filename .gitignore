@@ -2,3 +2,8 @@ node_modules
 dist/*.bundle.js
 
 yarn-error.log
+
+# extension private key from packing
+dist.pem
+# packed extension
+dist.crx
