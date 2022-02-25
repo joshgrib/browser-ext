@@ -23,15 +23,15 @@ const getNoteTemplate = ({ text, updated }, link) => {
   return `
     <tr ${dataKey}="${link}" style="${ style }">
       <td colspan="12">
-        <p>
+        <span style="display: inline-block; width: 80%">
           <b>Notes:</b> ${ text }
-        </p>
-        <p style="font-size: 0.75em; margin-top: 0;">
+        </span>
+        <span style="font-size: 0.75em; margin-top: 0;">
           <i>Updated ${ d.toLocaleDateString() } ${ d.toLocaleTimeString() }</i>
-        </p>
+        </span>
       </td>
     </tr>
-  `
+  `;
 };
 
 function refreshNotes () {
@@ -59,7 +59,7 @@ function refreshNotes () {
   $(noteRowSelector).click(e => {
     const key = $(e.target).closest(noteRowSelector).attr(dataKey);
     let note = notes[key];
-    const text = prompt(`Change note "${note.text}"`);
+    const text = prompt(`Change note "${note.text}"`, note.text);
     const updated = new Date();
     notes[key] = { text, updated };
     saveToLocalStorage(notes);
