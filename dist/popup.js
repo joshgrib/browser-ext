@@ -27,8 +27,9 @@ const openTabs = {
  * @param {string} innerText - The innerText property for the element
  * @param {function} click - A `click` event handler
  */
-const makeElem = ({tag, innerText, click, children=[]}) => {
+const makeElem = ({tag, id, innerText, click, children=[]}) => {
   const elem = document.createElement(tag);
+  elem.id = id;
   if (innerText) {
     elem.innerText = innerText;
   }
@@ -61,28 +62,25 @@ const createPopupContent = () => {
       openTabs.new(['http://sphereboardqa05.spheredemo.corp']);
     }
   }));
-  const LS_KEY = 'plugins-enabled';
-  if (window.localStorage.getItem(LS_KEY) === null) {
-    window.localStorage.setItem(LS_KEY, true);
+  const buttonText = {
+    true: 'Disable plugins',
+    false: 'Enable plugins'
   }
-  const enabled = window.localStorage.getItem(LS_KEY) == 'true';
-  if (enabled) {
-    chrome.runtime.sendMessage('plugins-enabled');
-  }
-  const initialText = enabled ? 'Disable Plugins' : 'Enable Plugins';
+  const toggleBtnId = 'plugin-toggle-btn'
   container.append(makeElem({
     tag: 'button',
-    innerText: initialText,
+    id: toggleBtnId,
+    innerText: buttonText[true],
     click: (e) => {
-      let enabled = window.localStorage.getItem(LS_KEY) == 'true';
+      let enabled = e.target.innerText === buttonText[true];
       enabled = !enabled;
-      if (enabled) {
-        chrome.runtime.sendMessage('plugins-enabled');
-      }
-      window.localStorage.setItem(LS_KEY, enabled);
-      e.target.innerText = enabled ? 'Disable Plugins' : 'Enable Plugins';
+      chrome.storage.sync.set({ pluginsEnabled: enabled });
+      e.target.innerText = buttonText[enabled];
     }
   }));
+  chrome.storage.sync.get(['pluginsEnabled'], ({pluginsEnabled}) => {
+    document.getElementById(toggleBtnId).innerText = buttonText[pluginsEnabled];
+  });
 }
 
 document.addEventListener('DOMContentLoaded', createPopupContent);

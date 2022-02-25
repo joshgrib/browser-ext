@@ -24,10 +24,25 @@ const runPlugins = () => {
   console.groupEnd(`${name} v${version}`);
 }
 
-chrome.runtime.onMessage.addListener(request => {
-  if (request.message === 'plugins-enabled') {
+// handle initial page load
+chrome.storage.sync.get(['pluginsEnabled'], ({pluginsEnabled}) => {
+  if (pluginsEnabled) {
     runPlugins();
   }
+});
+// handle state toggle
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace !== 'sync') return;
+
+  const { pluginsEnabled } = changes;
+  if (pluginsEnabled === undefined) return;
+
+  if (pluginsEnabled.newValue === true) {
+    runPlugins();
+  }
+});
+// handle page change
+chrome.runtime.onMessage.addListener(request => {
   if (request.message === messages.URL_CHANGE) {
     runPlugins();
   }

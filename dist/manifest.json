@@ -1,16 +1,16 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "josh-chrome-extension",
-  "version": "1.16.0",
+  "version": "2.0.0",
   "permissions": [
     "tabs",
+    "storage"
+  ],
+  "host_permissions": [
     "*://*/*"
   ],
   "background": {
-    "scripts": [
-      "background.bundle.js"
-    ],
-    "persistent": false
+    "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
@@ -23,7 +23,8 @@
       ]
     }
   ],
-  "browser_action": {
-    "default_popup": "popup.html"
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "A personal utility extension"
   }
 }

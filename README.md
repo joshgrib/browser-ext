@@ -2,7 +2,7 @@
 
 A browser extension for me to run my own scripts on web pages to add utilities
 
-I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-extension)
+I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-extension) and continue with [the official docs](https://developer.chrome.com/docs/extensions/mv3/)
 
 ## Bundle and update the extension
 
