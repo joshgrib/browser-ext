@@ -1,3 +1,4 @@
+//FIXME: it'd be nice to not have to edit this file to add a new plugin
 import diffTotals from './bb-pr-diff-totals.js';
 import diffTotals2 from './bb-diff-total.js';
 import prNotes from './bb-home-pr-notes.js';
@@ -8,6 +9,7 @@ import closeBranch from './bb-close-pr-branch.js';
 import jenkinsNoFavs from './jenkins-hide-favorites.js';
 import gsNdsRename from './gs-nds-swapname.js';
 import jiraDense from './jira-dense.js';
+import hideRecentRepos from './bb-hide-recent-repos.js';
 
 export default [
   diffTotals,
@@ -19,5 +21,6 @@ export default [
   closeBranch,
   jenkinsNoFavs,
   gsNdsRename,
-  jiraDense
+  jiraDense,
+  hideRecentRepos
 ];

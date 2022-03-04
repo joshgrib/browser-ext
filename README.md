@@ -45,13 +45,14 @@ After the unpacked extension is loaded, you can edit the popup files inside `./d
 
 > These are all in `./src/plugins`
 
-* **bb-close-pr-branch** - When merging a branch in bitbucket this auto-clicks the checkbox to close the source branch
-* **bb-diff-total** - Adds up the lines added/removed on a diff page and shows the total count of each
-* **bb-hide-archived-repos** - This looks for repos with `(Archived)` prepended and hides them from the home page
-* **bb-home-pr-notes** - Adds notes sections under pull requests on the Bitbucket home page, notes are stored in `localStorage`
-* **bb-home-show-all-prs** - Expands the pull requests on the home page to show them all
-* **bb-pr-diff-totals** - In the newer PR view of Bitbucket, add the total line diff counts and display total lines added and removed
-* **bb-pr-sort** - Sorts the pull requests for me to review to prioritize the repos I'm most familiar with
-* **gs-nds-swapname** - Rename VMs within a remote access portal
-* **jenkins-hide-favorites** - On the Jenkins Blue Ocean home page, hide the table of "favorite" pipelines
-* **jira-dense** - CSS changes to make some Jira pages more dense
+- **bb-close-pr-branch** - When merging a branch in bitbucket this auto-clicks the checkbox to close the source branch
+- **bb-diff-total** - Adds up the lines added/removed on a diff page and shows the total count of each
+- **bb-hide-archived-repos** - This looks for repos with `(Archived)` prepended and hides them from the home page
+- **bb-home-pr-notes** - Adds notes sections under pull requests on the Bitbucket home page, notes are stored in `localStorage`
+- **bb-home-show-all-prs** - Expands the pull requests on the home page to show them all
+- **bb-pr-diff-totals** - In the newer PR view of Bitbucket, add the total line diff counts and display total lines added and removed
+- **bb-pr-sort** - Sorts the pull requests for me to review to prioritize the repos I'm most familiar with
+- **gs-nds-swapname** - Rename VMs within a remote access portal
+- **jenkins-hide-favorites** - On the Jenkins Blue Ocean home page, hide the table of "favorite" pipelines
+- **jira-dense** - CSS changes to make some Jira pages more dense
+- **bb-pr-hide-recent-repos** - hides the "Recent Repos" section on the Bitbucket home page
