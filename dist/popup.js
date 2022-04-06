@@ -81,6 +81,11 @@ const createPopupContent = () => {
   chrome.storage.sync.get(['pluginsEnabled'], ({pluginsEnabled}) => {
     document.getElementById(toggleBtnId).innerText = buttonText[pluginsEnabled];
   });
+
+  /*TODO:
+  Make a button to select an element and delete it from the page to get rid of
+  annoying headers/sidebars/popups/etc
+  */
 }
 
 document.addEventListener('DOMContentLoaded', createPopupContent);
