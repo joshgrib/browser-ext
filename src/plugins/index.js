@@ -22,5 +22,5 @@ export default [
   jenkinsNoFavs,
   gsNdsRename,
   jiraDense,
-  hideRecentRepos
+  //hideRecentRepos
 ];

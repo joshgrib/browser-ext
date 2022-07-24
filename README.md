@@ -4,6 +4,8 @@ A browser extension for me to run my own scripts on web pages to add utilities
 
 I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-extension) and continue with [the official docs](https://developer.chrome.com/docs/extensions/mv3/)
 
+**This will only work on a Chromium-based browser.** I use Vivaldi but this will also work on Brave, Chrome, and anything else that's able to use the Chrome app store for browser extensions.
+
 ## Bundle and update the extension
 
 1. `. Run `yarn build`
@@ -11,10 +13,6 @@ I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-ext
 2. In the browser, visit `chrome://extensions`
 3. Make sure "Developer mode" is enabled
 4. Click the "Load unpacked" button and select the `dist` folder
-
-1. Make sure `brave.exe` is available in the system PATH variable
-2. Update the path to your directory in `package.json`
-3. Run `yarn deploy`
 
 ## TODO
 
