@@ -10,6 +10,7 @@ import jenkinsNoFavs from './jenkins-hide-favorites.js';
 import gsNdsRename from './gs-nds-swapname.js';
 import jiraDense from './jira-dense.js';
 import hideRecentRepos from './bb-hide-recent-repos.js';
+import prQaTask from './bb-pr-qa-task.js'
 
 export default [
   diffTotals,
@@ -23,4 +24,5 @@ export default [
   gsNdsRename,
   jiraDense,
   //hideRecentRepos
+  prQaTask,
 ];

@@ -19,7 +19,7 @@ const runPlugins = () => {
     } catch (e) {
       console.error(e);
     }
-    setInterval(p.run, 2000);
+    setInterval(p.run, p.runInterval || 2000);
   });
   console.groupEnd(`${name} v${version}`);
 }
