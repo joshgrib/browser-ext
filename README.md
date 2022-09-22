@@ -53,4 +53,4 @@ After the unpacked extension is loaded, you can edit the popup files inside `./d
 - **gs-nds-swapname** - Rename VMs within a remote access portal
 - **jenkins-hide-favorites** - On the Jenkins Blue Ocean home page, hide the table of "favorite" pipelines
 - **jira-dense** - CSS changes to make some Jira pages more dense
-- **bb-pr-hide-recent-repos** - hides the "Recent Repos" section on the Bitbucket home page
+- **bb-pr-qa-task** - alerts when certain PRs are missing a "QA approval" task

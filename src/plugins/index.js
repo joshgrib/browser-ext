@@ -9,7 +9,6 @@ import closeBranch from './bb-close-pr-branch.js';
 import jenkinsNoFavs from './jenkins-hide-favorites.js';
 import gsNdsRename from './gs-nds-swapname.js';
 import jiraDense from './jira-dense.js';
-import hideRecentRepos from './bb-hide-recent-repos.js';
 import prQaTask from './bb-pr-qa-task.js'
 
 export default [
@@ -23,6 +22,5 @@ export default [
   jenkinsNoFavs,
   gsNdsRename,
   jiraDense,
-  //hideRecentRepos
   prQaTask,
 ];
