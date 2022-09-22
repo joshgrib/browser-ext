@@ -24,7 +24,7 @@ const alertForMissingTask = () => {
     const isDone = checkbox.querySelector('input').checked;
     const taskName = label.innerText;
     console.log({ isDone, taskName });
-    if (taskName.toLowerCase().includes('qa approval')) {
+    if (taskName.toLowerCase().includes('qa ')) {
       hasQATask = true;
     }
   }
