@@ -1,5 +1,5 @@
 const authorsToAddTask = [
-  'Claudel', 'Anita', 'Josh', 'Nandini'
+  'Claudel', 'Anita', 'Josh', 'Nandini', 'Joseph'
 ];
 
 const alertForMissingTask = () => {
