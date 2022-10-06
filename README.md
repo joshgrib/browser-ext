@@ -8,7 +8,7 @@ I started with [this guide](https://thoughtbot.com/blog/how-to-make-a-chrome-ext
 
 ## Bundle and update the extension
 
-1. `. Run `yarn build`
+1. Run `yarn build`
     - This will create files in `./dist/`
 2. In the browser, visit `chrome://extensions`
 3. Make sure "Developer mode" is enabled
