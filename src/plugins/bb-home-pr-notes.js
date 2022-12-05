@@ -1,6 +1,8 @@
 const storageKey = 'bb-pr-notes-local-storage-key';
 const dataKey = 'data-pr-notes-key';
 
+//TODO: add a watcher for when the PR is viewed last (in a new tab, not just in the list)
+
 const loadFromLocalStorage = () => {
   let savedValue = localStorage.getItem(storageKey);
   if (savedValue === null) {

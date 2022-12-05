@@ -1,5 +1,5 @@
 const authorsToAddTask = [
-  'Claudel', 'Anita', 'Josh', 'Nandini', 'Joseph'
+  'Claudel', 'Anita', 'Josh', 'Nandini', 'Joseph', 'Shukhrat', 'Vadim'
 ];
 
 const alertForMissingTask = () => {
@@ -13,6 +13,7 @@ const alertForMissingTask = () => {
     }
   }
   if (!isTargetAuthor) {
+    // no need to add the task
     return;
   }
 
@@ -30,6 +31,24 @@ const alertForMissingTask = () => {
   }
   if (!hasQATask) {
     alert('No QA task!');
+    return;
+
+    //FIXME: this isn't working, can't figure out how to click into the input element
+    if (!confirm('No QA task! Add one?')) {
+      return;
+    }
+
+    const newTaskInput = document.querySelector('input[name="createTask"]');
+    newTaskInput.dispatchEvent(new Event('input'))
+    const prUrl = window.location.href;
+    const reqUrl = prUrl.replace('spheretechsol', '!api/internal/repositories/spheretechsol') + '/tasks';
+    fetch(reqUrl, {
+      method: "POST",
+      headers: {'Content-Type': 'application/json'}, 
+      body: JSON.stringify({ content: { raw: 'QA approval' }})
+    }).then(res => {
+      console.log("Request complete! response:", res);
+    });
   }
 }
 
