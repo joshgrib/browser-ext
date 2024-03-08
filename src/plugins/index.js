@@ -10,6 +10,7 @@ import jenkinsNoFavs from './jenkins-hide-favorites.js';
 import gsNdsRename from './gs-nds-swapname.js';
 import jiraDense from './jira-dense.js';
 import prQaTask from './bb-pr-qa-task.js'
+import ghClearActionRuns from './gh-clear-action-runs.js';
 
 export default [
   diffTotals,
@@ -23,4 +24,5 @@ export default [
   gsNdsRename,
   jiraDense,
   prQaTask,
+  ghClearActionRuns,
 ];
