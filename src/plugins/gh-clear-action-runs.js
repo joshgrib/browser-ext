@@ -7,6 +7,11 @@ export default {
       'bc-test.yml',
       'Package-File-test.yml',
       'azbridge-Deploy.yml',
+      'Appconfig-Deploy.yml',
+      'component.yml',
+      'connectors.yml',
+      'Test.yml',
+      'TestBuildMVC.yml',
     ];
     return url.includes('github.com') && workflowsToDelete.filter(w => url.includes(w)).length > 0;
   },
