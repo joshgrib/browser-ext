@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.0.2",
-    "rollup": "^1.31.1"
+    "rollup": "^2.79.2"
   }
 }
